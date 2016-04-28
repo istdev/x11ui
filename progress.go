@@ -37,6 +37,7 @@ func NewProgressBar(title string, p *Window, dims ...int) *ProgressBar {
 	}
 	pbar := new(ProgressBar)
 	pbar.me = newWindow(p.Window.X, p, title, dims...)
+	pbar.me.SetBGcolor(color.RGBA{100, 100, 100, 200})
 	pbar.SetDisplayScale(100.0)
 	pbar.ResetFmtString()
 	pbar.loadTheme()
